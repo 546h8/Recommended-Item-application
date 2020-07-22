@@ -1,0 +1,68 @@
+=render partial: 'header'
+
+.news
+  .new
+    = form_with model:@item, id: "new__items__form", local: true do |f| 
+      .new__photo
+        .new__photo__pop
+          %label.new__all-terop
+            Upload a photo
+        .new__photo__terop
+          1枚アップロードできます
+          #image-box-1
+            .item-num-0#image-box__container
+              = f.fields_for :images do |i|
+                .input-area
+                  = i.file_field :url, type: 'file',  value:"", style: "display:none", id:"img-file"
+                  %label{for: "img-file"}
+                    %i.fas.fa-camera
+      .new__explanation
+        .new__explanation__pop
+          %label.new__all-terop
+            Item name
+        .new__all-box
+          = f.text_field :name, class:"new__all__text-field", id: "item__name", placeholder: "40文字まで", maxlength: 40
+        .new__all-heading
+          %label.new__all-terop
+            Detailed item
+        .new__explanation__area
+          = f.text_area :introduce, class: "new__all__text-field new__explanation__area-field", id:"item__introduce",placeholder: "商品の説明 （ 1,000文字以内)&#13;&#10;(色、素材、重さなどよかった点)".html_safe
+        .new__explanation__length
+          %span.new__length-child
+            0/1000
+          .new__length-par
+      .new__show
+        %label.new__all-terop
+          Category
+        .listing-form-box
+          .listing-product-detail__category
+            .listing-select-wrapper
+              .listing-select-wrapper__box.new__all-box
+                -# = f.collection_select :category_id, Category.roots, :id , :name, {include_blank: "選択してください", selected: @item.category&.root_id}, required: true, class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"
+        .new__all-heading
+          %label.new__all-terop
+            Brand
+        .new__all-box
+          -# = f.text_field :brand, class: "new__all__text-field", placeholder: "例) シャネル"
+
+      .new__price
+        .new__price__pop
+          .new__price__pop
+            .new__price__pop-question
+              = link_to "#", class:'new__send__pop-question new__all-link' do
+                -# = icon('far','question-circle', class:'price__question__icon')
+        .new__price__price
+          %label.new__all-terop
+            Price
+          %span.span__price
+            ¥    
+            = f.number_field :price, class: "new__price__field"
+
+      .new__form
+        = f.submit "POST", class: "new__form-submit new__all-submit"
+        = f.submit "SAVE", class: "new__form-draft new__all-submit"
+        .new__form-back
+          = link_to "/", class:'new__form-back__link new__all-link' do
+            Back
+
+

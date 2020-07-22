@@ -1,0 +1,15 @@
+.postArea
+  -# - if user_signed_in? 
+  =link_to  new_item_path  do
+    .postArea__btn
+      %span.postArea__btn__text 
+        POST
+      .postArea__btn__icon
+        = icon('far','plus-square', class:'show__favorite__icon')
+        -# - else
+  -# =link_to  '#'  do
+  -#   .purchase-btn
+  -#     %span.purchase-btn__text 
+  -#       出品する
+  -#     .purchase-btn__img
+  -#       = icon('fas','star', class:'show__favorite__icon')
