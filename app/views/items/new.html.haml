@@ -38,7 +38,10 @@
           .listing-product-detail__category
             .listing-select-wrapper
               .listing-select-wrapper__box.new__all-box
-                -# = f.collection_select :category_id, Category.roots, :id , :name, {include_blank: "選択してください", selected: @item.category&.root_id}, required: true, class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"
+                -# f.collection_select(メソッド名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション or HTML属性 or イベント属性])
+                -# f.collection_select(:name, @categories, :id, :name)
+                = f.select :category_id, 
+                = f.collection_select :category_id, Category.roots, :id , :name, {include_blank: "選択してください", selected: @item.category &.root_id}, required: true, class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"
         .new__all-heading
           %label.new__all-terop
             Brand
