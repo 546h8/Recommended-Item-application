@@ -5,6 +5,11 @@
         =link_to root_path do
           =image_tag 'icon/main-icon-emblemmatic-recommended-item-logo-466.png',alt: "main-image", width:510, height:90
     .header__content__right
-      .header__content__right__user-area
-        =link_to "Log in" ,"#",class:'header__content__right__user-area__login'
-        =link_to "Sign up" ,"#",class:'header__content__right__user-area__signup'
+      - if user_signed_in?
+        .header__content__right__user-area
+          =link_to "Sign out" ,destroy_user_session_path,class:'header__content__right__user-area__signout'
+      - else
+        .header__content__right__user-area
+          =link_to "Log in" ,new_user_session_path,class:'header__content__right__user-area__login'
+          =link_to "Sign up" ,new_user_registration_path,class:'header__content__right__user-area__signup'
+          
