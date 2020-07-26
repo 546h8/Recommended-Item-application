@@ -1,24 +1,18 @@
-# README
+## 概要
+Ruby on ralisの勉強として作成したポートフォリオです。
+ユーザーの商品や食べ物を写真と共に投稿し、おすすめするアプリケーションです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# バージョン
+* ruby '2.6.5'
+* rails '6.0.0'
 
-Things you may want to cover:
+#実装機能
+* 投稿機能
+* 投稿削除機能（作成予定）
+* ユーザー登録機能
+* ユーザー削除機能（作成予定）
+*　一覧表示機能
+*　ログイン・ログアウト機能
+その他
+* ancestryによるカテゴリ機能
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
