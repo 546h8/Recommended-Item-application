@@ -220,7 +220,7 @@
               box-sizing: border-box;
               height: 48px;
               padding: 0 16px;
-              width: 153px;
+              width: 585px;
             }
           }
           &__fee{
@@ -274,4 +274,11 @@
         }
     }
 }
+.category{
+  border: 1px solid #ccc;
+}
   
+input[type="radio"]{
+  display: none;
+
+}

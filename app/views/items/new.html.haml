@@ -1,5 +1,4 @@
 =render partial: 'header'
-
 .news
   .new
     = form_with model:@item, id: "new__items__form", local: true do |f| 
@@ -38,34 +37,41 @@
           .listing-product-detail__category
             .listing-select-wrapper
               .listing-select-wrapper__box.new__all-box
-                -# f.collection_select(メソッド名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション or HTML属性 or イベント属性])
-                -# f.collection_select(:name, @categories, :id, :name)
-                = f.select :category_id, 
-                = f.collection_select :category_id, Category.roots, :id , :name, {include_blank: "選択してください", selected: @item.category &.root_id}, required: true, class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"
+                -# = f.select :category_id, options_for_select( @category_parent_array.map{|c| [c[:name], c[:id]]}),{include_blank: "選択してください"}, { class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"}
+                .categoryBox
+                  -# =f.form_with :category do |i|
+                  =f.input :category {type: "radio" ,name: "category", id: "category", class:"category" , value: "1" }
+                    -# %label :cateogry 
+                    衣類
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "2" }インテリア・住まい
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "3" }本・音楽・ゲーム
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "4" }おもちゃ・ホビー
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "5" }コスメ・香水・美容
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "6" }家電・スマホ・カメラ
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "7" }スポーツ・レジャー
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "8" }ハンドメイド
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "9" }自動車・バイク
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "10" }食べ物
+                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "11" }その他
+                
+        
         .new__all-heading
           %label.new__all-terop
             Brand
         .new__all-box
-          -# = f.text_field :brand, class: "new__all__text-field", placeholder: "例) シャネル"
+          = f.text_field :brand, class: "new__all__text-field", placeholder: "ブランド名"
 
       .new__price
-        .new__price__pop
-          .new__price__pop
-            .new__price__pop-question
-              = link_to "#", class:'new__send__pop-question new__all-link' do
-                -# = icon('far','question-circle', class:'price__question__icon')
         .new__price__price
           %label.new__all-terop
             Price
-          %span.span__price
-            ¥    
+          .span__price
+            ¥
             = f.number_field :price, class: "new__price__field"
 
       .new__form
         = f.submit "POST", class: "new__form-submit new__all-submit"
         = f.submit "SAVE", class: "new__form-draft new__all-submit"
         .new__form-back
-          = link_to "/", class:'new__form-back__link new__all-link' do
+          = link_to :back, class:'new__form-back__link new__all-link' do
             Back
-
-
