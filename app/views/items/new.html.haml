@@ -10,9 +10,10 @@
           1枚アップロードできます
           #image-box-1
             .item-num-0#image-box__container
-              = f.fields_for :images do |i|
+              = f.fields_for :image do |i|
                 .input-area
-                  = i.file_field :url, type: 'file',  value:"", style: "display:none", id:"img-file"
+                  -# = i.file_field :image, type: 'file',  value:"", style: "display:none", id:"img-file"
+                  = i.file_field :image, type: 'file',  value:"", id:"img-file"
                   %label{for: "img-file"}
                     %i.fas.fa-camera
       .new__explanation
@@ -37,22 +38,53 @@
           .listing-product-detail__category
             .listing-select-wrapper
               .listing-select-wrapper__box.new__all-box
-                -# = f.select :category_id, options_for_select( @category_parent_array.map{|c| [c[:name], c[:id]]}),{include_blank: "選択してください"}, { class: "listing-select-wrapper__box--select new__all__text-field", id: "parent_category"}
                 .categoryBox
-                  -# =f.form_with :category do |i|
-                  =f.input :category {type: "radio" ,name: "category", id: "category", class:"category" , value: "1" }
-                    -# %label :cateogry 
-                    衣類
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "2" }インテリア・住まい
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "3" }本・音楽・ゲーム
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "4" }おもちゃ・ホビー
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "5" }コスメ・香水・美容
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "6" }家電・スマホ・カメラ
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "7" }スポーツ・レジャー
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "8" }ハンドメイド
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "9" }自動車・バイク
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "10" }食べ物
-                  %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "11" }その他
+                  = f.radio_button :category, :衣類 
+                  = f.label :衣類 ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :インテリア・住まい
+                  = f.label :インテリア・住まい ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :本・音楽・ゲーム
+                  = f.label :本・音楽・ゲーム ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :おもちゃ・ホビー
+                  = f.label :おもちゃ・ホビー ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :コスメ・香水・美容
+                  = f.label :コスメ・香水・美容 ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :家電・スマホ・カメラ
+                  = f.label :家電・スマホ・カメラ ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :スポーツ・レジャー
+                  = f.label :スポーツ・レジャー ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :ハンドメイド
+                  = f.label :ハンドメイド ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :自動車・バイク
+                  = f.label :自動車・バイク ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :食べ物
+                  = f.label :食べ物 ,class: "category"
+                .categoryBox
+                  = f.radio_button :category, :その他
+                  = f.label :その他 ,class: "category"
+
+                  
+                  
+
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "2" }インテリア・住まい
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "3" }本・音楽・ゲーム
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "4" }おもちゃ・ホビー
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "5" }コスメ・香水・美容
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "6" }家電・スマホ・カメラ
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "7" }スポーツ・レジャー
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "8" }ハンドメイド
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "9" }自動車・バイク
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "10" }食べ物
+          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "11" }その他
                 
         
         .new__all-heading
@@ -71,7 +103,7 @@
 
       .new__form
         = f.submit "POST", class: "new__form-submit new__all-submit"
-        = f.submit "SAVE", class: "new__form-draft new__all-submit"
+        -# = f.submit "SAVE", class: "new__form-draft new__all-submit"
         .new__form-back
-          = link_to :back, class:'new__form-back__link new__all-link' do
+          = link_to "/", class:'new__form-back__link new__all-link' do
             Back

@@ -1,0 +1,35 @@
+= form_with model:@item, id: "new__items__form", local: true do |f| 
+  .categoryBox
+    = f.radio_button :category, :衣類 
+    = f.label :衣類 ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :インテリア・住まい
+    = f.label :インテリア・住まい ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :本・音楽・ゲーム
+    = f.label :本・音楽・ゲーム ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :おもちゃ・ホビー
+    = f.label :おもちゃ・ホビー ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :コスメ・香水・美容
+    = f.label :コスメ・香水・美容 ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :家電・スマホ・カメラ
+    = f.label :家電・スマホ・カメラ ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :スポーツ・レジャー
+    = f.label :スポーツ・レジャー ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :ハンドメイド
+    = f.label :ハンドメイド ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :自動車・バイク
+    = f.label :自動車・バイク ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :食べ物
+    = f.label :食べ物 ,class: "category"
+  .categoryBox
+    = f.radio_button :category, :その他
+
+
