@@ -144,8 +144,43 @@
           }
         }
 
-        &__show{
+        &__category{
           padding: 40px;
+          .listing-form-box{
+            padding-top:20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .categoryBox{
+              display: flex;
+              font-size: 14px;
+
+              label{
+                display: flex; 
+                
+                margin: 5px;
+                width: 160px;
+                height: 60px;
+                text-align: center;
+                line-height: 45px;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                color: #000000;
+                border: px solid #000000;
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+              }
+              label:hover{
+                opacity: 0.5;
+              }
+              input[type="radio"]:checked + label{
+                background-color:red;
+                color: #fff;
+              }
+            }
+          }
           &__pop{
             height: 19px;
             margin-bottom: 24px;
@@ -186,6 +221,9 @@
             }
           }
         
+        }
+        &__brand{
+          padding: 40px;
         }
 
         &__price{
@@ -279,6 +317,9 @@
 }
   
 input[type="radio"]{
-  // display: none;
+  display: none;
+}
 
+%label.category{
+  color:red;
 }

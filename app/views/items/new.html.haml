@@ -31,62 +31,46 @@
           %span.new__length-child
             0/1000
           .new__length-par
-      .new__show
+      .new__category
         %label.new__all-terop
           Category
         .listing-form-box
-          .listing-product-detail__category
-            .listing-select-wrapper
-              .listing-select-wrapper__box.new__all-box
-                .categoryBox
-                  = f.radio_button :category, :衣類 
-                  = f.label :衣類 ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :インテリア・住まい
-                  = f.label :インテリア・住まい ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :本・音楽・ゲーム
-                  = f.label :本・音楽・ゲーム ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :おもちゃ・ホビー
-                  = f.label :おもちゃ・ホビー ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :コスメ・香水・美容
-                  = f.label :コスメ・香水・美容 ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :家電・スマホ・カメラ
-                  = f.label :家電・スマホ・カメラ ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :スポーツ・レジャー
-                  = f.label :スポーツ・レジャー ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :ハンドメイド
-                  = f.label :ハンドメイド ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :自動車・バイク
-                  = f.label :自動車・バイク ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :食べ物
-                  = f.label :食べ物 ,class: "category"
-                .categoryBox
-                  = f.radio_button :category, :その他
-                  = f.label :その他 ,class: "category"
+          .categoryBox
+            = f.radio_button :category, :衣類 ,id:"category_id_0"
+            = f.label :衣類 ,class: "category", for: "category_id_0"
+          .categoryBox
+            = f.radio_button :category, :インテリア・住まい, id:"category_id_1"
+            = f.label :インテリア・住まい ,class: "category", for: "category_id_1"
+          .categoryBox
+            = f.radio_button :category, :本・音楽・ゲーム, id:"category_id_2"
+            = f.label :本・音楽・ゲーム ,class: "category", for: "category_id_2"
+          .categoryBox
+            = f.radio_button :category, :おもちゃ・ホビー, id:"category_id_3"
+            = f.label :おもちゃ・ホビー ,class: "category", for: "category_id_3"
+          .categoryBox
+            = f.radio_button :category, :コスメ・香水・美容, id:"category_id_4"
+            = f.label :コスメ・香水・美容 ,class: "category", for: "category_id_4"
+          .categoryBox
+            = f.radio_button :category, :家電・スマホ・カメラ, id:"category_id_5"
+            = f.label :家電・スマホ・カメラ ,class: "category", for: "category_id_5"
+          .categoryBox
+            = f.radio_button :category, :スポーツ・レジャー, id:"category_id_6"
+            = f.label :スポーツ・レジャー ,class: "category", for: "category_id_6"
+          .categoryBox
+            = f.radio_button :category, :ハンドメイド, id:"category_id_7"
+            = f.label :ハンドメイド ,class: "category", for: "category_id_7"
+          .categoryBox
+            = f.radio_button :category, :自動車・バイク, id:"category_id_8"
+            = f.label :自動車・バイク ,class: "category", for: "category_id_8"
+          .categoryBox
+            = f.radio_button :category, :食べ物, id:"category_id_9"
+            = f.label :食べ物 ,class: "category", for: "category_id_9"
+          .categoryBox
+            = f.radio_button :category, :その他, id:"category_id_10"
+            = f.label :その他 ,class: "category", for: "category_id_10"
 
-                  
-                  
 
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "2" }インテリア・住まい
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "3" }本・音楽・ゲーム
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "4" }おもちゃ・ホビー
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "5" }コスメ・香水・美容
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "6" }家電・スマホ・カメラ
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "7" }スポーツ・レジャー
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "8" }ハンドメイド
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "9" }自動車・バイク
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "10" }食べ物
-          -#               -# %input{type: "radio" ,name: "category", id: "category", class:"category" , value: "11" }その他
-                
-        
+      .new__brand
         .new__all-heading
           %label.new__all-terop
             Brand
