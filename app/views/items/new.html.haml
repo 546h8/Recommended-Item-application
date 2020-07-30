@@ -77,6 +77,18 @@
         .new__all-box
           = f.text_field :brand, class: "new__all__text-field", placeholder: "ブランド名"
 
+      .new__rating
+        .new__all-heading
+          %label.new__all-terop
+            Rating
+        #star-rating.star-rating
+          =f.hidden_field :rating ,id:"rate"
+          
+
+          
+          
+
+
       .new__price
         .new__price__price
           %label.new__all-terop
