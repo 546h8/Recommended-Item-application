@@ -71,7 +71,7 @@
 
         &__photo{
           padding: 40px;
-          height: 300px;
+          height: 500px;
           &__pop{
             height: 19px; 
           }
@@ -80,6 +80,11 @@
             margin-top: 16px;
             font-size: 14px;
             line-height: 1.4em;
+          }
+          .img-preview{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
           }
           #image-box-1{
             height: 50px;
