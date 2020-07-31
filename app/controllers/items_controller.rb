@@ -3,21 +3,29 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = Item.all.order(created_at: :asc)
+    @items = Item.all
     # @users = User.find(@item.users.name)
     # @user = @item.
   end
 
   def new
     @item = Item.new
+    
   end
 
   def create
-    @item = Item.create(item_params)
-    @item.users << current_user
-    # @item.save
-    redirect_to root_path
-      
+    @item = Item.new(item_params)
+    @item.user_id = current_user.id if current_user
+    # @item.users << current_user
+    # item_ids << current_user
+
+    if @item.save
+      # user_id << current_user
+
+      redirect_to root_path
+    else
+        render 'new'
+    end
   end
 
   def edit
@@ -26,7 +34,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:id ,:rating ,:name, :introduce, :category, :brand, :price, :image, :created_at)
+    params.require(:item).permit(:id ,:rating ,:name, :introduce, :category, :brand, :price, :image, :created_at, :user_id)
   end
 
   def set_item

@@ -18,8 +18,9 @@ body{
     border-top: 1px dotted #000000;
     &__content{
       &__userArea{
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom:20px;
+        font-weight: bold;
       }
       &__inside{
         display: flex;
