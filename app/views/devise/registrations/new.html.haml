@@ -1,0 +1,82 @@
+.user-body
+  .userHeader
+    =image_tag 'icon/main-icon-emblemmatic-recommended-item-logo-466.png',alt: "main-icon", width:500, height:70
+
+  .userMain
+    .userMain__title
+      新規登録
+    .userMain__contents
+      =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource 
+        .userMain__contents__field
+          .userMain__contents__field__mail
+            .user-input-title
+              Email
+            = f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"メールアドレス",class:"user-input-area"
+            .userMain__contents__field__name
+              .user-input-title
+                User name
+              =f.text_field :name, autofocus: true, autocomplete: "name",placeholder:"ユーザー名",class:"user-input-area"
+            .userMain__contents__field__pass
+              .user-input-title
+                Password
+              = f.password_field :password, autocomplete: "new-password",placeholder:"パスワード（6文字以上）",class:"user-input-area" 
+              
+            .userMain__contents__field__pass
+              .user-input-title
+                Password confirmation
+              = f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"パスワード確認（6文字以上）",class:"user-input-area"
+            
+            .userMain__contents__field__login
+              = f.submit "上記で新規登録"
+
+  =link_to new_user_session_path do
+    .signin
+      サインイン
+
+              
+
+
+
+
+
+
+
+
+
+
+  -#  <h2>Sign up</h2>
+
+  -#  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  -#    <%= render "devise/shared/error_messages", resource: resource %>
+
+  -#    <div class="field">
+  -#      <%= f.label :email %><br />
+  -#      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  -#    </div>
+
+  -#    <div class="name">
+  -#      <%= f.label :name %><br />
+  -#      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  -#    </div>
+
+
+  -# <div class="field">
+  -#   <%= f.label :password %>
+  -#   <% if @minimum_password_length %>
+  -#   <em>(<%= @minimum_password_length %> characters minimum)</em>
+  -#   <% end %><br />
+  -#   <%= f.password_field :password, autocomplete: "new-password" %>
+  -# </div>
+
+  -#    <div class="field">
+  -#      <%= f.label :password_confirmation %><br />
+  -#      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  -#    </div>
+
+  -#    <div class="actions">
+  -#      <%= f.submit "Sign up" %>
+  -#    </div>
+  -#  <% end %>
+
+  -#  <%= render "devise/shared/links" %>
