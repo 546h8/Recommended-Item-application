@@ -3,6 +3,7 @@
   =render partial: 'mainTitle'
 
   .contentArea
+    -# -------------------------ここから消す------------------------
     .contentArea__box
       .contentArea__box__content
         .contentArea__box__content__userArea
@@ -61,7 +62,6 @@
                       Name
                     %td
                       おいしいハンバーガーです
-
                   %tr
                     %th
                       Price
@@ -73,18 +73,17 @@
                       Rating
                     %td
                       ★★★★☆
-
                   %tr
                     %th
                       Link
                     %td
                       https-------
-
+                      -# ----------------------------------------------------
     -@items.each do |item|
       .contentArea__box
         .contentArea__box__content
           .contentArea__box__content__userArea
-            Taro Yamada
+            =item.users_name
           .contentArea__box__content__inside
             .contentArea__box__content__inside__imageArea
               .contentArea__box__content__inside__imageArea__text
@@ -100,20 +99,17 @@
                         Name
                       %td
                         =item.introduce
-
                     %tr
                       %th
                         Brand
                       %td
                         =item.brand
-
                     %tr
                       %th
                         Price
                       %td
                         =item.price
                         円
-                      
                     %tr
                       %th
                         Rating

@@ -1,10 +1,11 @@
 class ItemsController < ApplicationController
-  # before_action :set_category, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy, :purchase, :buy]
 
 
   def index
-    @items = Item.all
+    @items = Item.all.order(created_at: :asc)
+    # @users = User.find(@item.users.name)
+    # @user = @item.
   end
 
   def new
@@ -12,8 +13,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    Item.create(item_params)
-    # @item = Item.new(item_params)
+    @item = Item.create(item_params)
+    @item.users << current_user
+    # @item.save
     redirect_to root_path
       
   end
