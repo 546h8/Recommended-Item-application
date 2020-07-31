@@ -1,0 +1,62 @@
+.user-body{
+  width:500px;
+  margin: 80px auto;
+  .userMain{
+    &__title{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &__contents{
+      &__field{
+        &__save{
+          display:flex;
+          align-items: center;
+          padding:5px 0 ;
+        }
+        &__login{
+          input{
+          margin:10px 0;
+          width:100%;
+          height:50px;
+          font-size:20px;
+          background-color:#ff0211;
+          color:#fff;
+          border:none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.user-input-area{
+  height:50px;
+  width:100%;
+  padding:0 10px;
+  font-size:15px;
+}
+.user-input-title{
+  padding-top:10px;
+  font-size:20px;
+}
+.user-input-title-remember{
+
+  font-size:15px;
+}
+.signup{
+  margin:10px 0;
+  width:100%;
+  height:50px;
+  font-size:20px;
+  background-color:#1f73b7;
+  color:#fff;
+  border:none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  a{
+
+  }
+}
