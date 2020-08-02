@@ -11,6 +11,9 @@ pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
+RAILS_ROOT = File.expand_path('../../', __FILE__)
+ENV['BUNDLE_GEMFILE'] = RAILS_ROOT + "/Gemfile"
+
 
 timeout 60
 
