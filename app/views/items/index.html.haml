@@ -10,8 +10,8 @@
             .contentArea__box__content__userArea__user
               =item.user.name
             .contentArea__box__content__userArea__edit
-              -# -if item.user_id == current_user.id
-              =link_to "Delete", item_path(item), method: :delete, data: { confirm: '削除しますか？' },class:"contentArea__box__content__userArea__edit__btn"
+              -if item.user_id == current_user.id
+                =link_to "Delete", item_path(item), method: :delete, data: { confirm: '削除しますか？' },class:"contentArea__box__content__userArea__edit__btn"
           .contentArea__box__content__inside
             .contentArea__box__content__inside__imageArea
               .contentArea__box__content__inside__imageArea__text
