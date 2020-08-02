@@ -20,7 +20,26 @@ body{
       &__userArea{
         font-size: 30px;
         margin-bottom:20px;
-        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        width: 107%;
+        &__flexbox{
+
+        }
+        &__edit{
+          background-color: #eee;
+          color:#f8f8f8;
+          height:50px;
+          width: 120px;
+          &__btn{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+
+          }
+
+          
+        }
       }
       &__inside{
         display: flex;
@@ -34,7 +53,6 @@ body{
           }
         }
         &__textarea{
-          width:360px;
           font-size:20px;
           margin-left: 5%;
           &__text{
