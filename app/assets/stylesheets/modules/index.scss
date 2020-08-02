@@ -27,17 +27,16 @@ body{
 
         }
         &__edit{
-          background-color: #eee;
+          
           color:#f8f8f8;
           height:50px;
           width: 120px;
           &__btn{
+            background-color: #eee;
             justify-content: center;
             display: flex;
             align-items: center;
-
           }
-
           
         }
       }
