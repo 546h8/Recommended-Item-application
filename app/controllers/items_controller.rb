@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy, :purchase, :buy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -16,8 +16,6 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user_id = current_user.id if current_user
-    # @item.users << current_user
-    # item_ids << current_user
 
     if @item.save
       # user_id << current_user
@@ -30,6 +28,13 @@ class ItemsController < ApplicationController
 
   def edit
     
+  end
+
+  def destroy
+    if @item.user_id == current_user.id
+    @item.destroy
+    redirect_to root_path
+    end
   end
 
   private
