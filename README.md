@@ -8,6 +8,10 @@ Ruby on ralisの勉強として作成したポートフォリオです。
 * URL
 IPアドレス：http://52.196.22.158/
 
+* ログイン
+メールアドレス: test@test.com
+パスワード　：　testman
+
 ## バージョン
 * ruby '2.6.5'
 * rails '6.0.0'
