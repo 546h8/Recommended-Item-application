@@ -12,7 +12,7 @@ Ruby on ralisの勉強として作成したポートフォリオです。
 ![fa118a53c73bcd64a981788d79e4abd5](https://user-images.githubusercontent.com/66345393/89140170-cf125400-d57b-11ea-9b23-5f708a70a8cb.gif)
 
 
-画像投稿機能
+- 画像投稿機能
   
 ![6e1da2733e81376ce0e919a04d446848](https://user-images.githubusercontent.com/66345393/89140032-72169e00-d57b-11ea-99e8-e244c011bb17.gif)
   
