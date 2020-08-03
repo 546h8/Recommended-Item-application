@@ -9,7 +9,6 @@ Ruby on ralisの勉強として作成したポートフォリオです。
   * rails '6.0.0'
 
   ## 実装機能
-  ###　新規投稿
   ![fa118a53c73bcd64a981788d79e4abd5](https://user-images.githubusercontent.com/66345393/89140170-cf125400-d57b-11ea-9b23-5f708a70a8cb.gif)
 
 
