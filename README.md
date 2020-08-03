@@ -10,6 +10,7 @@ Ruby on ralisの勉強として作成したポートフォリオです。
 
 # 実装機能
 * 新規投稿機能
+
 ![e4ad761d06c8f56e5dbd5f2e9927f880](https://user-images.githubusercontent.com/66345393/89128223-0eff1a00-d52f-11ea-87e0-8c565f957400.gif)
 * 投稿削除機能
 * ユーザー登録機能
