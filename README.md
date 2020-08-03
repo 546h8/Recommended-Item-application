@@ -15,13 +15,15 @@ Ruby on ralisの勉強として作成したポートフォリオです。
 
 
   * 画像登録
-
-  ![6e1da2733e81376ce0e919a04d446848](https://user-images.githubusercontent.com/66345393/89140032-72169e00-d57b-11ea-99e8-e244c011bb17.gif)
+   ![6e1da2733e81376ce0e919a04d446848](https://user-images.githubusercontent.com/66345393/89140032-72169e00-d57b-11ea-99e8-e244c011bb17.gif)
 
   * レーティング
 
-  ![d2d890e8720665decec403e0aa488ed2](https://user-images.githubusercontent.com/66345393/89140241-0b45b480-d57c-11ea-997b-5e2686b8666c.gif)
+   ![d2d890e8720665decec403e0aa488ed2](https://user-images.githubusercontent.com/66345393/89140241-0b45b480-d57c-11ea-997b-5e2686b8666c.gif)
 
+  *　カテゴリ
+  
+   ![6adbb3f5c403d24305f0b079e8ed0aed](https://user-images.githubusercontent.com/66345393/89141840-b7899a00-d580-11ea-914b-5790522f6ae1.gif)
 
 
 * 投稿削除機能
