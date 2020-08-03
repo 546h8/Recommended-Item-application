@@ -9,8 +9,8 @@ Ruby on ralisの勉強として作成したポートフォリオです。
 IPアドレス：http://52.196.22.158/
 
 * ログイン
-メールアドレス: test@test.com
-パスワード　：　testman
+  * メールアドレス: test@test.com
+  * パスワード　：　testman
 
 ## バージョン
 * ruby '2.6.5'
