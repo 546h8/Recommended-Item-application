@@ -27,7 +27,8 @@ IPアドレス：http://52.196.22.158/
 ## 実装機能
 ### 　投稿機能
  新規投稿時に使用します。画像保存機能やレーティング機能、カテゴリー選択機能をjavascriptも用いて実装しています。投稿した画像はAmazon S3に保存されます。
- ![fa118a53c73bcd64a981788d79e4abd5](https://user-images.githubusercontent.com/66345393/89140170-cf125400-d57b-11ea-9b23-5f708a70a8cb.gif)
+ 
+  ![fa118a53c73bcd64a981788d79e4abd5](https://user-images.githubusercontent.com/66345393/89140170-cf125400-d57b-11ea-9b23-5f708a70a8cb.gif)
 
 
 
