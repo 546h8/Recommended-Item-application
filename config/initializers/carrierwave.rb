@@ -12,8 +12,13 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'recommended-item2020'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/recommended-item2020'
+  # 本番環境
+  # config.fog_directory  = 'recommended-item2020'
+  # config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/recommended-item2020'
+
+  # ローカル
+  config.storage :file
+  config.enable_processing = false if Rails.env.test?
 
   
 end
